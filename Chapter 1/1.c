@@ -2,7 +2,10 @@
 
 int main()
 {
-	printf ("Hello\n");
+	printf("Ivan Ivanov\n");
+	printf("Ivan\nIvanov\n");
+	printf("Ivan ");
+	printf("Ivanov\n");
 	return 0;
 }
 
