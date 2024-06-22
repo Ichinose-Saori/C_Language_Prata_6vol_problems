@@ -10,6 +10,11 @@ int main()
     printf("To exit, enter q.\n");
     while (scanf("%lf", &a) && scanf("%lf", &b))
     {
+        if (a==0 || b == 0)
+        {
+            printf("Ehh, zero numbers are prohibited, try again!\n");
+            continue;
+        }
         printf("%lf\n", absol(a, b)/(a*b));
     }
     return 0;
