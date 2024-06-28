@@ -1,3 +1,0 @@
-  I don't understand what this problem states, so as it is easier version of 9_3.c, I'll skip it.
-In russian edit they want us to print a character from column i to j. That could be understood 
-as simply formatting the string, I guess.
