@@ -5,7 +5,7 @@
 
 void copy_arr(double *, const double *, int);
 void copy_ptr(double *, const double *, int);
-void copy_ptrs(double *, const double *, int*);
+void copy_ptrs(double *, const double *, double *);
 void printo_arr(const double *, int);
 
 int main(void)
