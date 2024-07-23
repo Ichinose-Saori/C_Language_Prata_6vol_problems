@@ -3,17 +3,17 @@
 
 #include <stdio.h>
 
-void word(char*, int);
+void word(char*);
 
 int main(void)
 {
 	int arr[SIZE+1];
-	word(arr, SIZE);
+	word(arr);
 	puts(arr);
 	return 0;
 }
 
-void word(char* arr, int n)
+void word(char* arr)
 {
 	int i = 0;
 	int started = 0;
@@ -22,7 +22,7 @@ void word(char* arr, int n)
 		continue;
 	arr[i] = a;
 	i++;
-	while (i < n)
+	while (i < SIZE)
 	{
 		arr[i] = getchar();
 		if (arr[i] == ' ' || arr[i] == '\n' || arr[i] == '\t')
@@ -32,5 +32,5 @@ void word(char* arr, int n)
 		}
 		i++;
 	}
-	arr[n] = '\0';
+	arr[SIZE] = '\0';
 }
