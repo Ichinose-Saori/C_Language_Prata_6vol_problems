@@ -1,22 +1,26 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include <stdlib.h>
 
-#define SIZE 10
+#define SIZE 5
 
-char* grave_danger(int, char*);
+void grave_danger(char*, int);
 
 int main(void)
 {
-    char arr[SIZE+1];
-    grave_danger(SIZE, arr);
-    fputs(arr, stdout);
-    return 0;
+	int arr[SIZE+1];
+	grave_danger(arr, SIZE);
+	fputs(arr, stdout);
+	return 0;
 }
 
-char* grave_danger(int n, char* arr)
+void grave_danger(char* arr, int n)
 {
-    fgets(arr, n, stdin);
-    return arr;
+	int i = 0; 
+	while (i < n)
+	{
+		arr[i] = getchar();
+		i++;
+	}
+	arr[n] = '\0';
 }
