@@ -3,6 +3,7 @@
 #define GOD 10
 
 #include <stdio.h>
+#include <string.h>
 
 void sensei(char* arr[], int); //main function of 11_11
 void nullify_god(char* orig[]); //just wanted to be sure that all are NULL
