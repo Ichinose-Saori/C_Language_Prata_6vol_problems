@@ -44,7 +44,7 @@ void show_info(void)
 		printf("Hmm, your car is broken or didn't really move.\n");
 	else if (prev_mode == 0)
 	{
-		printf("Fuel consumption is %lf liters per 100 km.\n", fuel*(double)path/100.0);
+		printf("Fuel consumption is %lf liters per 100 km.\n", fuel*100.0/(double)path);
 	}
 	else if (prev_mode == 1)
 	{
