@@ -1,15 +1,14 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 #define MSIZE 20
-enum month {
+enum month{
     january, february, march, april, may, june, july, august, september, october, november, december
 };
 const char* words[] = {
-    "January", "February", "March",
-    "April", "May", "June", "July",
+    "January", "February", "March", 
+    "April", "May", "June", "July", 
     "August", "September", "October",
     "November", "December"
 };
@@ -39,8 +38,8 @@ char* s_gets(char* arr, int size)
         find = strchr(arr, '\n');
         if (find)
             *find = '\0';
-        else
-            while (getchar() != '\n')
+        else 
+            while(getchar() != '\n')
                 continue;
     }
     return ret_val;
@@ -49,15 +48,15 @@ char* s_gets(char* arr, int size)
 int gimme_cor(char* arr, int n)
 {
     int option = -1;
-    int i;
-
+    enum month yay;
+ 
     while (option == -1)
     {
         s_gets(arr, n);
-        for (i = 0; i <= 11; i++)
+        for (yay = january; yay <= december; yay++)
         {
-            if (strcmp(arr, words[i]) == 0)
-                option = i;
+            if (strcmp(arr, words[yay]) == 0)
+                option = yay;
         }
     }
     return option;
